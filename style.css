@@ -157,6 +157,7 @@ body {
 section {
   text-align: center;
   position: relative;
+  margin-top: 50px;
 }
 
 .about h2,
@@ -174,7 +175,7 @@ section {
   padding: 30px;
   border-radius: 26px;
   box-shadow: 0 16px 30px rgba(66, 40, 25, 0.08);
-  font-size: 15px;
+  font-size: 14px;
   color: var(--muted);
 }
 
@@ -219,11 +220,11 @@ section {
 
 .feature-card p {
   color: #7f675d;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .feature-icon {
-  width: 50px;
+  width: 90px;
   height: 50px;
   border-radius: 16px;
   display: grid;
@@ -480,7 +481,6 @@ section {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
-
 @media (min-width: 720px) {
   .features-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
