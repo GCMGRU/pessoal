@@ -23,17 +23,17 @@
           <span>Instagram</span>
         </a>
 
-        <a href="https://wa.me/SEU_NUMERO" target="_blank" class="btn btn-whatsapp">
+        <a href="https://wa.me/SEU_NUMERO" target="_blank" class="btn btn-whatsapp" data-modal="whatsapp">
           <img src="assets/icons8-whatsapp-logo-94.png" alt="WhatsApp" class="btn-icon" />
           <span>WhatsApp</span>
         </a>
 
-        <a href="#sobre" class="btn btn-site">
+        <a href="#sobre" class="btn btn-site" data-modal="loja">
           <img src="assets/icons8-site-60.png" alt="Nossa loja" class="btn-icon" />
           <span>Nossa loja</span>
         </a>
 
-        <a href="https://shopee.com.br/SEU_LINK" target="_blank" class="btn btn-shopee">
+        <a href="https://shopee.com.br/SEU_LINK" target="_blank" class="btn btn-shopee" data-modal="shopee">
           <img src="assets/icons8-shopee-48.png" alt="Shopee" class="btn-icon" />
           <span>Shopee</span>
         </a>
@@ -157,8 +157,24 @@
         <small>© 2026 Cat &amp; Miau Shop. Todos os direitos reservados.</small>
       </div>
     </footer>
+    <div class="cat-modal" data-modal-backdrop aria-hidden="true">
+      <div class="cat-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="cat-modal-title">
+        <button class="cat-modal__close" type="button" data-modal-close aria-label="Fechar aviso">✕</button>
+        <div class="cat-modal__content">
+          <div class="cat-modal__badge">😺 Em breve</div>
+          <h3 id="cat-modal-title">Em breve</h3>
+          <p class="cat-modal__message"></p>
+          <div class="cat-modal__paws">
+            <span>🐾</span>
+            <span>🐾</span>
+            <span>🐾</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 
+  <script src="script.js"></script>
 </body>
 
 </html>
