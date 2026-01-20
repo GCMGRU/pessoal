@@ -40,15 +40,16 @@ body {
   position: absolute;
   left: var(--x);
   top: var(--y);
-  font-size: var(--size, 26px);
+  width: var(--size, 26px);
+  height: var(--size, 26px);
   opacity: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><g fill='%236b6b6b'><circle cx='16' cy='18' r='7'/><circle cx='32' cy='12' r='7'/><circle cx='48' cy='18' r='7'/><circle cx='24' cy='40' r='11'/><circle cx='40' cy='40' r='11'/></g></svg>");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
   filter: drop-shadow(0 4px 8px rgba(86, 50, 34, 0.08));
   animation: pawStep 0.8s ease forwards;
   animation-delay: var(--delay, 0s);
-}
-
-.paw-path span::before {
-  content: "🐾";
 }
 
 .page {
