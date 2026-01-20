@@ -146,10 +146,7 @@ body {
 .btn-shopee {
   background-color: var(--shoppe);
 }
-.btn-shopee .btn-icon,
-.btn-shopee span {
-  transform: translateY(-1px);
-}
+
 
 .hero-footer {
   margin-top: 14px;
@@ -300,8 +297,8 @@ body {
   position: fixed;
   right: 22px;
   bottom: 22px;
-  width: 62px;
-  height: 62px;
+  width: 72px;
+  height: 72px;
   border-radius: 50%;
   border: none;
   background: rgba(255, 247, 239, 0.35);
@@ -314,8 +311,8 @@ body {
 }
 
 .scroll-top img {
-  width: 52px;
-  height: 52px;
+  width: 72px;
+  height: 72px;
   object-fit: contain;
   display: block;
 }
