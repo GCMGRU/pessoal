@@ -147,7 +147,10 @@ body {
   background-color: var(--shoppe);
 }
 
-
+.btn-shopee .btn-icon,
+.btn-shopee span {
+  transform: translateX(-10px);
+}
 .hero-footer {
   margin-top: 14px;
   font-size: 0.8rem;
