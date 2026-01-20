@@ -8,6 +8,9 @@ const modalBackdrop = document.querySelector("[data-modal-backdrop]");
 const modalMessage = document.querySelector(".cat-modal__message");
 const modalTitle = document.querySelector("#cat-modal-title");
 const closeButton = document.querySelector("[data-modal-close]");
+const prefersReducedMotion = window.matchMedia(
+  "(prefers-reduced-motion: reduce)"
+).matches;
 
 const openModal = (type) => {
   if (!modalBackdrop || !modalMessage) return;
@@ -49,10 +52,18 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
+const scrollTopButton = document.querySelector(".scroll-top");
+
+if (scrollTopButton) {
+  scrollTopButton.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: prefersReducedMotion ? "auto" : "smooth",
+    });
+  });
+}
+
 const revealElements = document.querySelectorAll(".reveal");
-const prefersReducedMotion = window.matchMedia(
-  "(prefers-reduced-motion: reduce)"
-).matches;
 
 if (prefersReducedMotion) {
   revealElements.forEach((element) => element.classList.add("is-visible"));
