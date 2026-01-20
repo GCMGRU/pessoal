@@ -337,7 +337,13 @@ section {
 
 .about-emojis {
   margin-top: 18px;
-  font-size: 22px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-emojis-image {
+  width: 72px;
+  height: auto;
 }
 
 .section-subtitle {
