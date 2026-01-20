@@ -25,12 +25,38 @@ body {
   color: var(--text);
   display: flex;
   justify-content: center;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.paw-path {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.paw-path span {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  font-size: var(--size, 26px);
+  opacity: 0;
+  filter: drop-shadow(0 4px 8px rgba(86, 50, 34, 0.08));
+  animation: pawStep 0.8s ease forwards;
+  animation-delay: var(--delay, 0s);
+}
+
+.paw-path span::before {
+  content: "🐾";
 }
 
 .page {
   width: 100%;
   max-width: 960px;
   padding: 32px 16px 48px;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-card {
@@ -176,6 +202,17 @@ body {
   }
   50% {
     transform: translateY(-6px);
+  }
+}
+
+@keyframes pawStep {
+  0% {
+    opacity: 0;
+    transform: translate(-10px, 10px) rotate(var(--rot, 0deg)) scale(0.8);
+  }
+  100% {
+    opacity: 0.18;
+    transform: translate(0, 0) rotate(var(--rot, 0deg)) scale(1);
   }
 }
 
@@ -570,13 +607,20 @@ section {
   .feature-icon img,
   .mascot-photo img,
   .spark,
-  .reveal {
+  .reveal,
+  .paw-path span {
     transition: none;
   }
 
   .feature-card:hover,
   .mascot-card:hover {
     transform: none;
+  }
+
+  .paw-path span {
+    animation: none;
+    opacity: 0.18;
+    transform: translate(0, 0) rotate(var(--rot, 0deg));
   }
 }
 
